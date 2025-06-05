@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Code Joiner</title>
+    <script src="https://js.puter.com/v2/"></script>
+    
+<link rel="stylesheet" href="style.css"></head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-nav">
+                <a href="#" id="openCodeBreaker" class="app-link-btn">
+                    <div class="app-icon" id="appIcon">🔧</div>
+                    <span>Code Breaker</span>
+                </a>
+            </div>
+            <h1>🔗 HTML5 Code Joiner</h1>
+            <p>Drop your separate HTML, CSS, and JS files to combine them into a single HTML file</p>
+        </div>
+
+        <div class="main-content">
+            <div class="upload-section">
+                <h2>Upload Files</h2>
+                <div class="drop-zone" id="dropZone">
+                    <div class="drop-zone-content">
+                        <h3>Drop your files here</h3>
+                        <p>or click to browse</p>
+                        <div class="file-types">
+                            <span class="file-type">📄 .html</span>
+                            <span class="file-type">🎨 .css</span>
+                            <span class="file-type">⚡ .js</span>
+                        </div>
+                    </div>
+                </div>
+                <input type="file" id="fileInput" class="hidden-input" multiple="" accept=".html,.css,.js">
+            </div>
+
+            <div class="controls">
+                <button id="loadFromFolderBtn" class="btn btn-primary">
+                    <span>📂</span>
+                    <span>Load from Puter Folder</span>
+                </button>
+                <button id="joinCodeBtn" class="btn btn-warning" disabled="">
+                    <span>🔗</span>
+                    <span>Join Code</span>
+                </button>
+                <button id="clearFilesBtn" class="btn btn-secondary" disabled="">
+                    <span>🗑️</span>
+                    <span>Clear All</span>
+                </button>
+            </div>
+
+            <div id="filesList" class="files-list hidden"></div>
+
+            <div id="statusDiv" class="hidden"></div>
+
+            <div id="outputSection" class="output-section hidden">
+                <h2 style="color: #333; margin-bottom: 20px; font-size: 1.5rem;">📄 Combined Code</h2>
+                
+                <div class="result-controls">
+                    <button id="copyCodeBtn" class="btn btn-success" disabled="">
+                        <span>📋</span>
+                        <span>Copy Full Code</span>
+                    </button>
+                    <button id="previewCodeBtn" class="btn btn-preview" disabled="">
+                        <span>👁️</span>
+                        <span>HTML Preview</span>
+                    </button>
+                    <button id="downloadCodeBtn" class="btn btn-info" disabled="">
+                        <span>📥</span>
+                        <span>Download index.html</span>
+                    </button>
+                    <button id="saveToPuterBtn" class="btn btn-primary" disabled="">
+                        <span>💾</span>
+                        <span>Save in Puter Folder</span>
+                    </button>
+                </div>
+
+                <div class="code-output">
+                    <div class="output-header">
+                        <div class="file-name">
+                            <span class="file-icon">📄</span>
+                            <span>Combined HTML File</span>
+                        </div>
+                    </div>
+                    <div class="output-content">
+                        <pre id="codeOutput"></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Preview Modal -->
+    <div id="previewModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>🔍 HTML Preview</h3>
+                <button class="modal-close" id="closePreview">×</button>
+            </div>
+            <div class="modal-body">
+                <iframe id="previewFrame" class="preview-iframe" sandbox="allow-scripts allow-same-origin"></iframe>
+            </div>
+        </div>
+    </div>
+
+    
+
+<script src="app.js"></script></body></html>
