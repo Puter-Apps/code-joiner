@@ -2,7 +2,7 @@
   <a href="https://puter.com/app/code-joiner" target="_blank">Code Joiner</a>
 </h1>
 
-<p align="center">A web-based tool that combines separate HTML, CSS, and JavaScript files into a single, self-contained HTML file.
+<p align="center">Combine separate HTML, CSS, and JavaScript files into a single, self-contained HTML file.
 </p>
 
 <p align="center">
