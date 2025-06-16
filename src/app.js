@@ -8,9 +8,9 @@
 
         // File type mapping
         const fileTypeMap = {
-            'html': { icon: '📄', name: 'HTML' },
-            'css': { icon: '🎨', name: 'CSS' },
-            'js': { icon: '⚡', name: 'JavaScript' }
+            'html': { icon: '<i class="fas fa-file-code" style="color: #667eea;"></i>', name: 'HTML' },
+            'css': { icon: '<i class="fas fa-palette" style="color: #667eea;"></i>', name: 'CSS' },
+            'js': { icon: '<i class="fas fa-bolt" style="color: #667eea;"></i>', name: 'JavaScript' }
         };
 
         // Initialize drag and drop functionality
@@ -151,7 +151,7 @@
 
                 updateFilesList();
                 updateButtons();
-                showStatus(`✅ Loaded ${validFiles.length} file(s) from folder: "${selectedFolder.path}"`, 'success');
+                showStatus(`<i class="fas fa-check-circle" style="color: #155724;"></i> Loaded ${validFiles.length} file(s) from folder: "${selectedFolder.path}"`, 'success');
 
             } catch (error) {
                 if (error.message.includes('canceled') || error.message.includes('cancelled')) {
@@ -313,7 +313,7 @@
                 document.getElementById('outputSection').classList.remove('hidden');
                 updateButtons();
 
-                showStatus('✅ Files successfully combined into single HTML file!', 'success');
+                showStatus('<i class="fas fa-check-circle" style="color: #155724;"></i> Files successfully combined into single HTML file!', 'success');
 
             } catch (error) {
                 showStatus('Error combining files: ' + error.message, 'error');
@@ -336,7 +336,7 @@
                 textArea.select();
                 try {
                     document.execCommand('copy');
-                    showStatus('✅ Code copied to clipboard!', 'success');
+                    showStatus('<i class="fas fa-check-circle" style="color: #155724;"></i> Code copied to clipboard!', 'success');
                 } catch (err) {
                     showStatus('Failed to copy to clipboard', 'error');
                 }
@@ -383,7 +383,7 @@
                 // Store cleanup function for later use
                 modal._cleanup = cleanup;
                 
-                showStatus('✅ Preview opened! You can see your combined code running live.', 'success');
+                showStatus('<i class="fas fa-check-circle" style="color: #155724;"></i> Preview opened! You can see your combined code running live.', 'success');
 
             } catch (error) {
                 showStatus('Error opening preview: ' + error.message, 'error');
@@ -422,7 +422,7 @@
                 document.body.removeChild(link);
                 URL.revokeObjectURL(url);
 
-                showStatus('✅ index.html downloaded successfully!', 'success');
+                showStatus('<i class="fas fa-check-circle" style="color: #155724;"></i> index.html downloaded successfully!', 'success');
 
             } catch (error) {
                 showStatus('Error downloading file: ' + error.message, 'error');
@@ -474,7 +474,7 @@
                  */
                 await puter.fs.write(`${selectedFolder.path}/index.html`, combinedCode);
                 
-                showStatus(`✅ Combined file saved successfully to: "${selectedFolder.path}/index.html"`, 'success');
+                showStatus(`<i class="fas fa-check-circle" style="color: #155724;"></i> Combined file saved successfully to: "${selectedFolder.path}/index.html"`, 'success');
 
             } catch (error) {
                 if (error.message.includes('canceled') || error.message.includes('cancelled')) {
