@@ -576,11 +576,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Load app icon
     loadAppIcon();
 
-    // App navigation
-    document.getElementById('openCodeBreaker').addEventListener('click', function(e) {
-        e.preventDefault();
-        openCodeBreaker();
-    });
+    // App navigation - using natural link behavior
+    // No event listener needed as we're using the href attribute directly
 
     // Action buttons
     document.getElementById('loadFromFolderBtn').addEventListener('click', loadFromFolder);
