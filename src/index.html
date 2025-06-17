@@ -1,24 +1,32 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML5 Code Joiner</title>
     <script src="https://js.puter.com/v2/"></script>
     <script src="https://btn.puter.site/7.js" data-repo="https://github.com/Puter-Apps/code-joiner" data-position="50"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css"></head>
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
     <div class="container">
         <div class="header">
-            
-            
+            <div class="header-nav">
+                <a href="#" id="openCodeBreaker" class="app-link-btn">
+                    <span id="appIcon" class="app-icon">
+                        <i class="fas fa-divide" style="color: #f8f9fa;"></i>
+                    </span>
+                    <span>Switch to Code Breaker</span>
+                </a>
+            </div>
             <h1><i class="fas fa-link" style="color: #f8f9fa;"></i> HTML5 Code Joiner</h1>
             <p>Drop your separate HTML, CSS, and JS files to combine them into a single HTML file</p>
         </div>
 
         <div class="main-content">
             <div class="upload-section">
-                <h2>Upload Files</h2>
+                <h2><i class="fas fa-upload" style="color: #667eea;"></i> Upload Files</h2>
                 <div class="drop-zone" id="dropZone">
                     <div class="drop-zone-content">
                         <h3>Drop your files here</h3>
@@ -30,7 +38,7 @@
                         </div>
                     </div>
                 </div>
-                <input type="file" id="fileInput" class="hidden-input" multiple="" accept=".html,.css,.js">
+                <input type="file" id="fileInput" class="hidden-input" multiple accept=".html,.css,.js">
             </div>
 
             <div class="controls">
@@ -38,11 +46,11 @@
                     <span><i class="fas fa-folder-open" style="color: #f8f9fa;"></i></span>
                     <span>Load from Puter Folder</span>
                 </button>
-                <button id="joinCodeBtn" class="btn btn-warning" disabled="">
+                <button id="joinCodeBtn" class="btn btn-warning" disabled>
                     <span><i class="fas fa-link" style="color: #f8f9fa;"></i></span>
                     <span>Join Code</span>
                 </button>
-                <button id="clearFilesBtn" class="btn btn-secondary" disabled="">
+                <button id="clearFilesBtn" class="btn btn-secondary" disabled>
                     <span><i class="fas fa-trash-alt" style="color: #f8f9fa;"></i></span>
                     <span>Clear All</span>
                 </button>
@@ -56,19 +64,19 @@
                 <h2 style="color: #333; margin-bottom: 20px; font-size: 1.5rem;"><i class="fas fa-file-code" style="color: #667eea;"></i> Combined Code</h2>
                 
                 <div class="result-controls">
-                    <button id="copyCodeBtn" class="btn btn-success" disabled="">
+                    <button id="copyCodeBtn" class="btn btn-success" disabled>
                         <span><i class="fas fa-clipboard" style="color: #f8f9fa;"></i></span>
                         <span>Copy Full Code</span>
                     </button>
-                    <button id="previewCodeBtn" class="btn btn-preview" disabled="">
+                    <button id="previewCodeBtn" class="btn btn-preview" disabled>
                         <span><i class="fas fa-eye" style="color: #f8f9fa;"></i></span>
                         <span>HTML Preview</span>
                     </button>
-                    <button id="downloadCodeBtn" class="btn btn-info" disabled="">
+                    <button id="downloadCodeBtn" class="btn btn-info" disabled>
                         <span><i class="fas fa-download" style="color: #f8f9fa;"></i></span>
                         <span>Download index.html</span>
                     </button>
-                    <button id="saveToPuterBtn" class="btn btn-primary" disabled="">
+                    <button id="saveToPuterBtn" class="btn btn-primary" disabled>
                         <span><i class="fas fa-save" style="color: #f8f9fa;"></i></span>
                         <span>Save in Puter Folder</span>
                     </button>
@@ -101,7 +109,7 @@
             </div>
         </div>
     </div>
-
     
-
-<script src="app.js"></script></body></html>
+    <script src="app.js"></script>
+</body>
+</html>
